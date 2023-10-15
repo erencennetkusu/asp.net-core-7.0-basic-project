@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        @await Html.PartialAsync("_Navbar")
+    </header>
+
+
+    <div class="container mt-3">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @RenderSection("Scripts",false)
+
+
+</body>
+
+</html>

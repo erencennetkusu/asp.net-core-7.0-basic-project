@@ -1,0 +1,20 @@
+@model Course
+
+            <div class="card mb-3 ">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img width="400" class="img-fluid rounded-start" src="~/img/@Model.Image" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.Title</h5>
+                            <p class="card-text">@Model.Description</p>
+                            @if(Model.Tags!=null){
+                            @foreach(var tag in Model.Tags){
+                                <span class="badge bg-primary">@tag</span>
+                            }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
